@@ -1,0 +1,23 @@
+{
+  "word-dim":           [300],
+  "hidden-dim":         [300],
+  "clf-hidden-dim":     [300, 1024],
+  "clf-num-layers":     [1],
+  "leaf-rnn":           ["True", "False"],
+  "bidirectional":      ["True", "False"],
+  "intra-attention":    ["False"],
+  "batchnorm":          ["True", "False"],
+  "dropout":            [0.25, 0.5],
+  "l2reg":              [0.0, 0.0001],
+  "pretrained":         ["glove.840B.300d"],
+  "fix-word-embedding": ["True", "False"],
+  "device":             [0],
+  "batch-size":         [32],
+  "max-epoch":          [500],
+  "save-dir":           ["data/sst_exp"],
+  "optimizer":          ["adam", "adagrad", "adadelta"],
+  "fine-grained":       ["False"],
+  "lower":              ["True", "False"],
+  "halve-lr-every":     [2],
+  "id":                 [0, 1, 2]
+}

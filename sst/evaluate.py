@@ -4,7 +4,7 @@ import numpy as np
 import torch
 from torchtext import data, datasets
 
-from sst.model import SSTModel
+from sst.models import SSTModel
 
 
 def evaluate(args):
@@ -56,7 +56,7 @@ def evaluate(args):
         label = batch.label
         logits = model(words=words, length=length)
         label_pred = logits.max(1)[1]
-        num_correct_batch = torch.eq(label, label_pred).long().sum(
+        num_correct_batch = torch.eq(label, label_pred).long().sum()
         num_correct_batch = num_correct_batch.item()
         num_correct += num_correct_batch
     print(f'# data: {num_data}')
@@ -71,15 +71,15 @@ def main():
     parser.add_argument('--hidden-dim', required=True, type=int)
     parser.add_argument('--clf-hidden-dim', required=True, type=int)
     parser.add_argument('--clf-num-layers', required=True, type=int)
-    parser.add_argument('--leaf-rnn', default=False, action='store_true')
+    parser.add_argument('--leaf-rnn', default=True, action='store_true')
     parser.add_argument('--intra-attention', default=False, action='store_true')
-    parser.add_argument('--batchnorm', default=False, action='store_true')
+    parser.add_argument('--batchnorm', default=True, action='store_true')
     parser.add_argument('--dropout', default=0.0, type=float)
-    parser.add_argument('--device', default='cpu')
-    parser.add_argument('--batch-size', default=128, type=int)
-    parser.add_argument('--bidirectional', default=False, action='store_true')
+    parser.add_argument('--device', default='cuda')
+    parser.add_argument('--batch-size', default=10, type=int)
+    parser.add_argument('--bidirectional', default=True, action='store_true')
     parser.add_argument('--fine-grained', default=False, action='store_true')
-    parser.add_argument('--lower', default=False, action='store_true')
+    parser.add_argument('--lower', default=True, action='store_true')
     args = parser.parse_args()
     evaluate(args)
 

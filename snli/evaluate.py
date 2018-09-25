@@ -5,8 +5,8 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader
 
-from snli.model import SNLIModel
-from snli.utils.dataset import SNLIDataset
+from snli.models import SNLIModel
+from snli.utilss.dataset import SNLIDataset
 
 
 def evaluate(args):

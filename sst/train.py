@@ -10,11 +10,11 @@ from torch.optim import lr_scheduler
 from torch.nn.utils import clip_grad_norm_
 from torchtext import data, datasets
 
-from sst.model import SSTModel
+from sst.models import SSTModel
 
 
-logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s %(levelname)-8s %(message)s')
+logger = logging.getLogger("general_logger")
+from functools import partial
 
 
 def train(args):
@@ -33,10 +33,10 @@ def train(args):
     text_field.build_vocab(*dataset_splits, vectors=args.pretrained)
     label_field.build_vocab(*dataset_splits)
 
-    logging.info(f'Initialize with pretrained vectors: {args.pretrained}')
-    logging.info(f'Number of classes: {len(label_field.vocab)}')
+    logger.info(f'Initialize with pretrained vectors: {args.pretrained}')
+    logger.info(f'Number of classes: {len(label_field.vocab)}')
 
-    train_loader, valid_loader, _ = data.BucketIterator.splits(
+    train_loader, valid_loader, test_loader = data.BucketIterator.splits(
         datasets=dataset_splits, batch_size=args.batch_size, device=args.device)
 
     num_classes = len(label_field.vocab)
@@ -52,10 +52,10 @@ def train(args):
     if args.pretrained:
         model.word_embedding.weight.data.set_(text_field.vocab.vectors)
     if args.fix_word_embedding:
-        logging.info('Will not update word embeddings')
+        logger.info('Will not update word embeddings')
         model.word_embedding.weight.requires_grad = False
-    logging.info(f'Using device {args.device}')
-    model.to(args.device)
+    logger.info(f'Using device {args.device}')
+    model = model.cuda(args.device)
     params = [p for p in model.parameters() if p.requires_grad]
     if args.optimizer == 'adam':
         optimizer_class = optim.Adam
@@ -67,12 +67,26 @@ def train(args):
     scheduler = lr_scheduler.ReduceLROnPlateau(
         optimizer=optimizer, mode='max', factor=0.5,
         patience=20 * args.halve_lr_every, verbose=True)
+
+
+    def reduce_lr(self, epoch):
+        lr_scheduler.ReduceLROnPlateau._reduce_lr(self, epoch)
+        logger.info(f"learning rate is reduced by factor 0.5!")
+    scheduler._reduce_lr = partial(reduce_lr, scheduler)
+
+
+    patience = 20 * 5
+    last_time = 0
+
+
     criterion = nn.CrossEntropyLoss()
 
     train_summary_writer = SummaryWriter(
-        log_dir=os.path.join(args.save_dir, 'log', 'train'))
+        log_dir=os.path.join(args.tensor_board_path, 'log' + str(hash(str(args))), 'train'))
     valid_summary_writer = SummaryWriter(
-        log_dir=os.path.join(args.save_dir, 'log', 'valid'))
+        log_dir=os.path.join(args.tensor_board_path, 'log' + str(hash(str(args))), 'valid'))
+    test_summary_writer = SummaryWriter(
+        log_dir=os.path.join(args.tensor_board_path, 'log' + str(hash(str(args))), 'test'))
 
     def run_iter(batch, is_training):
         model.train(is_training)
@@ -128,7 +142,7 @@ def train(args):
                 name='accuracy', value=valid_accuracy, step=iter_count)
             scheduler.step(valid_accuracy)
             progress = train_loader.iterations / len(train_loader)
-            logging.info(f'Epoch {progress:.2f}: '
+            logger.info(f'Epoch {progress:.2f}: '
                          f'valid loss = {valid_loss:.4f}, '
                          f'valid accuracy = {valid_accuracy:.4f}')
             if valid_accuracy > best_vaild_accuacy:
@@ -138,9 +152,29 @@ def train(args):
                                   f'-{valid_accuracy:.4f}.pkl')
                 model_path = os.path.join(args.save_dir, model_filename)
                 torch.save(model.state_dict(), model_path)
-                print(f'Saved the new best model to {model_path}')
+                logger.info(f'Saved the new best model to {model_path}')
+                last_time = 0
+            else:
+                last_time += 1
+                if last_time > patience:
+                    return
             if progress > args.max_epoch:
                 break
+
+            with torch.no_grad():
+                num_correct = 0
+                num_data = len(dataset_splits[2])
+                for test_batch in test_loader:
+                    words, length = test_batch.text
+                    label = test_batch.label
+                    logits = model(words=words, length=length)
+                    label_pred = logits.max(1)[1]
+                    num_correct_batch = torch.eq(label, label_pred).long().sum()
+                    num_correct_batch = num_correct_batch.item()
+                    num_correct += num_correct_batch
+                add_scalar_summary(summary_writer=test_summary_writer, name='accuracy', value=num_correct/num_data,
+                                   step=iter_count)
+                logger.info(f'Accuracy: {num_correct / num_data:.4f} # data: {num_data} # correct: {num_correct}')
 
 
 def main():
@@ -149,25 +183,60 @@ def main():
     parser.add_argument('--hidden-dim', required=True, type=int)
     parser.add_argument('--clf-hidden-dim', required=True, type=int)
     parser.add_argument('--clf-num-layers', required=True, type=int)
-    parser.add_argument('--leaf-rnn', default=False, action='store_true')
-    parser.add_argument('--bidirectional', default=False, action='store_true')
-    parser.add_argument('--intra-attention', default=False, action='store_true')
-    parser.add_argument('--batchnorm', default=False, action='store_true')
+    parser.add_argument('--leaf-rnn', type=lambda val: True if val == "True" else False)
+    parser.add_argument('--bidirectional', type=lambda val: True if val == "True" else False)
+    parser.add_argument('--intra-attention', type=lambda val: True if val == "True" else False)
+    parser.add_argument('--batchnorm', type=lambda val: True if val == "True" else False)
     parser.add_argument('--dropout', default=0.0, type=float)
     parser.add_argument('--l2reg', default=0.0, type=float)
     parser.add_argument('--pretrained', default=None)
-    parser.add_argument('--fix-word-embedding', default=False,
-                        action='store_true')
-    parser.add_argument('--device', default='cpu')
+    parser.add_argument('--fix-word-embedding', type=lambda val: True if val == "True" else False)
+    parser.add_argument('--device', required=True, type=int)
     parser.add_argument('--batch-size', required=True, type=int)
     parser.add_argument('--max-epoch', required=True, type=int)
     parser.add_argument('--save-dir', required=True)
     parser.add_argument('--omit-prob', default=0.0, type=float)
     parser.add_argument('--optimizer', default='adam')
-    parser.add_argument('--fine-grained', default=False, action='store_true')
+    parser.add_argument('--fine-grained', type=lambda val: True if val == "True" else False)
     parser.add_argument('--halve-lr-every', default=2, type=int)
-    parser.add_argument('--lower', default=False, action='store_true')
+    parser.add_argument('--lower', type=lambda val: True if val == "True" else False)
+
+    parser.add_argument('--id', type=int)
     args = parser.parse_args()
+
+    if args.bidirectional and not args.leaf_rnn:
+        import sys
+        sys.exit(0)
+
+    logs_dir = f"{args.save_dir}/logs"
+    if not os.path.exists(logs_dir):
+        os.makedirs(logs_dir)
+
+    args.tensor_board_path = f"{args.save_dir}/tensorboard"
+
+    models_dir = f"{args.save_dir}/models/m{hash(str(args))}"
+    if not os.path.exists(models_dir):
+        os.makedirs(models_dir)
+    args.save_dir = models_dir
+
+    import random
+    seed = hash(str(args)) % 1000_000
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    random.seed(seed)
+
+    file_name = f"{logs_dir}/l{hash(str(args))}.log"
+    handler = logging.FileHandler(file_name, mode='w')
+    formatter = logging.Formatter("%(asctime)s - %(message)s", "%d-%m-%Y %H:%M:%S")
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+    logger.setLevel(logging.INFO)
+    logger.info(f"args: {str(args)}")
+    logger.info(f"hash is: {hash(str(args))}")
+
+    logger.info(f"seed: {seed}")
+    logger.info(f"checkpoint's dir is: {args.save_dir}")
+
     train(args)
 
 
