@@ -21,3 +21,452 @@
   "halve-lr-every":     [2],
   "id":                 [0, 1, 2, 3, 4, 5]
 }
+
+
+//ssh://havrylov@localhost:2000/private/home/havrylov/.conda/envs/myenv3/bin/python -u /private/home/havrylov/projects/unsupervised-treelstm/stool/parse_sst_logs.py
+//clf_hidden_dim=300, leaf_rnn=True, bidirectional=False, batchnorm=True, dropout=0.5, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=True,
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m5829330200119320477', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8951 0.9044 0.9083 15.11: data/sst2_detailed/logs/l-2778920769651534963.log
+//data/sst2_detailed/models/m5829330200119320477/model-15.11-0.3508-0.8951.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=1, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-2051966939637623387', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.9007 0.911 0.9154 11.57: data/sst2_detailed/logs/l538234239572905298.log
+//data/sst2_detailed/models/m-2051966939637623387/model-11.57-0.3482-0.9007.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-3752666767445249246', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8984 0.9039 0.9088 10.72: data/sst2_detailed/logs/l8337538351402662718.log
+//data/sst2_detailed/models/m-3752666767445249246/model-10.72-0.3402-0.8984.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m4656912738867295199', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8951 0.9001 0.9083 12.27: data/sst2_detailed/logs/l-8658790362177424286.log
+//data/sst2_detailed/models/m4656912738867295199/model-12.27-0.3125-0.8951.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-4016862801356834763', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.9029 0.9001 0.9121 11.57: data/sst2_detailed/logs/l-145004770137607985.log
+//data/sst2_detailed/models/m-4016862801356834763/model-11.57-0.3227-0.9029.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-2511986613070177665', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.894 0.8957 0.9105 13.61: data/sst2_detailed/logs/l6589289389688982905.log
+//data/sst2_detailed/models/m-2511986613070177665/model-13.61-0.3340-0.8940.pkl
+//---------------
+//[0.9044, 0.911, 0.9039, 0.9001, 0.9001, 0.8957]
+//91.10000000000001 89.57000000000001 90.25333333333333 0.47534782586602325
+//========================================================================
+//clf_hidden_dim=300, leaf_rnn=True, bidirectional=False, batchnorm=True, dropout=0.5, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=False,
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-173211807682944491', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8929 0.9028 0.9121 7.08: data/sst2_detailed/logs/l8283367072913560538.log
+//data/sst2_detailed/models/m-173211807682944491/model-7.08-0.3133-0.8929.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m6867782120460335322', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.9018 0.9023 0.9116 15.76: data/sst2_detailed/logs/l4639875813958491145.log
+//data/sst2_detailed/models/m6867782120460335322/model-15.76-0.3696-0.9018.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=1, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m6444857467312033889', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8996 0.894 0.9116 17.85: data/sst2_detailed/logs/l809299379121554065.log
+//data/sst2_detailed/models/m6444857467312033889/model-17.85-0.4000-0.8996.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-7967802868492373935', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.9051 0.9105 0.9138 12.07: data/sst2_detailed/logs/l4066182727762277521.log
+//data/sst2_detailed/models/m-7967802868492373935/model-12.07-0.3259-0.9051.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-3408101962722230136', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.894 0.9012 0.9072 5.49: data/sst2_detailed/logs/l5261399754673745223.log
+//data/sst2_detailed/models/m-3408101962722230136/model-5.49-0.2960-0.8940.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m5012602752198580379', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8906 0.9017 0.9061 8.98: data/sst2_detailed/logs/l8976160198616619875.log
+//data/sst2_detailed/models/m5012602752198580379/model-8.98-0.3013-0.8906.pkl
+//---------------
+//[0.9028, 0.9023, 0.894, 0.9105, 0.9012, 0.9017]
+//91.05 89.4 90.20833333333333 0.4790064949687231
+//========================================================================
+//clf_hidden_dim=300, leaf_rnn=True, bidirectional=False, batchnorm=False, dropout=0.5, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=False,
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-8910905089737945052', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8962 0.8979 0.9055 13.91: data/sst2_detailed/logs/l-8308570015748496155.log
+//data/sst2_detailed/models/m-8910905089737945052/model-13.91-0.3000-0.8962.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-6274953878498354329', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.9074 0.9001 0.9088 22.09: data/sst2_detailed/logs/l1026397860804136274.log
+//data/sst2_detailed/models/m-6274953878498354329/model-22.09-0.3551-0.9074.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m8358373105378855471', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8962 0.905 0.9088 13.07: data/sst2_detailed/logs/l7500654421458368114.log
+//data/sst2_detailed/models/m8358373105378855471/model-13.07-0.3252-0.8962.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-5660803397567352210', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8862 0.8869 0.9044 4.69: data/sst2_detailed/logs/l2693908987398040533.log
+//data/sst2_detailed/models/m-5660803397567352210/model-4.69-0.3085-0.8862.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-4196991063750805179', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.894 0.9023 0.9077 11.47: data/sst2_detailed/logs/l5279909536050270396.log
+//data/sst2_detailed/models/m-4196991063750805179/model-11.47-0.2936-0.8940.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=1, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m7779368811360244218', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.9007 0.8995 0.9083 9.67: data/sst2_detailed/logs/l-8499571041917735634.log
+//data/sst2_detailed/models/m7779368811360244218/model-9.67-0.3106-0.9007.pkl
+//---------------
+//[0.8979, 0.9001, 0.905, 0.8869, 0.9023, 0.8995]
+//90.5 88.69 89.86166666666668 0.5702168203606605
+//========================================================================
+//clf_hidden_dim=300, leaf_rnn=True, bidirectional=False, batchnorm=True, dropout=0.25, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=True,
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-2999516433878541017', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8906 0.8968 0.9033 10.02: data/sst2_detailed/logs/l7126811540353002043.log
+//data/sst2_detailed/models/m-2999516433878541017/model-10.02-0.4110-0.8906.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m7381853295684088885', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8962 0.8935 0.9023 6.48: data/sst2_detailed/logs/l6204387558591335419.log
+//data/sst2_detailed/models/m7381853295684088885/model-6.48-0.3522-0.8962.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-2952195445183388641', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8984 0.8979 0.9001 13.07: data/sst2_detailed/logs/l-9049250857055297241.log
+//data/sst2_detailed/models/m-2952195445183388641/model-13.07-0.4207-0.8984.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-7998810164544683315', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.9007 0.9028 0.905 7.53: data/sst2_detailed/logs/l6422568371705388424.log
+//data/sst2_detailed/models/m-7998810164544683315/model-7.53-0.3552-0.9007.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-7273945784275919436', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8973 0.8984 0.9055 7.28: data/sst2_detailed/logs/l5811477010439301304.log
+//data/sst2_detailed/models/m-7273945784275919436/model-7.28-0.3720-0.8973.pkl
+//---------------
+//[0.8968, 0.8935, 0.8979, 0.9028, 0.8984]
+//90.28 89.35 89.788 0.2994261177653035
+//========================================================================
+//clf_hidden_dim=300, leaf_rnn=True, bidirectional=False, batchnorm=False, dropout=0.25, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=True,
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=1, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-3326722235940134146', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.894 0.8924 0.9044 6.38: data/sst2_detailed/logs/l-8341596190370851211.log
+//data/sst2_detailed/models/m-3326722235940134146/model-6.38-0.3048-0.8940.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m2118931769741684671', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.9007 0.9077 0.9116 9.62: data/sst2_detailed/logs/l-8713397853795929629.log
+//data/sst2_detailed/models/m2118931769741684671/model-9.62-0.3941-0.9007.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-7289644796826963906', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8973 0.8918 0.9077 9.77: data/sst2_detailed/logs/l-4501973402070410605.log
+//data/sst2_detailed/models/m-7289644796826963906/model-9.77-0.4127-0.8973.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m8034404317280446389', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8917 0.8984 0.9039 10.57: data/sst2_detailed/logs/l-3805678193121067200.log
+//data/sst2_detailed/models/m8034404317280446389/model-10.57-0.4761-0.8917.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-1120900001005814466', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8929 0.9001 0.9033 7.88: data/sst2_detailed/logs/l-9023332609603650117.log
+//data/sst2_detailed/models/m-1120900001005814466/model-7.88-0.4054-0.8929.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-4907874567722301467', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8984 0.8962 0.9055 11.17: data/sst2_detailed/logs/l-3831165468213255094.log
+//data/sst2_detailed/models/m-4907874567722301467/model-11.17-0.4234-0.8984.pkl
+//---------------
+//[0.8924, 0.9077, 0.8918, 0.8984, 0.9001, 0.8962]
+//90.77 89.18 89.77666666666667 0.5344363593752024
+//========================================================================
+//clf_hidden_dim=300, leaf_rnn=True, bidirectional=False, batchnorm=True, dropout=0.25, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=False,
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-5301295173025298835', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8962 0.8968 0.9033 8.33: data/sst2_detailed/logs/l3837421857557379720.log
+//data/sst2_detailed/models/m-5301295173025298835/model-8.33-0.3720-0.8962.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m4941754475704942841', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8973 0.9066 0.9127 17.01: data/sst2_detailed/logs/l-2725390013531646491.log
+//data/sst2_detailed/models/m4941754475704942841/model-17.01-0.4677-0.8973.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-5661534647771214421', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8929 0.8957 0.9033 8.98: data/sst2_detailed/logs/l-2338532424596011810.log
+//data/sst2_detailed/models/m-5661534647771214421/model-8.98-0.3268-0.8929.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m4141148774576192423', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.894 0.905 0.9077 7.88: data/sst2_detailed/logs/l7366469930261759235.log
+//data/sst2_detailed/models/m4141148774576192423/model-7.88-0.3514-0.8940.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=1, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m3045901805785548746', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8951 0.8962 0.9023 11.77: data/sst2_detailed/logs/l1629746835126422134.log
+//data/sst2_detailed/models/m3045901805785548746/model-11.77-0.4303-0.8951.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m8539895913278127098', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8929 0.8968 0.9033 7.13: data/sst2_detailed/logs/l1932605238977217481.log
+//data/sst2_detailed/models/m8539895913278127098/model-7.13-0.3585-0.8929.pkl
+//---------------
+//[0.8968, 0.9066, 0.8957, 0.905, 0.8962, 0.8968]
+//90.66 89.57000000000001 89.95166666666667 0.4482713711829258
+//========================================================================
+//clf_hidden_dim=300, leaf_rnn=True, bidirectional=False, batchnorm=False, dropout=0.5, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=True,
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m1186560379468823444', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.894 0.9023 0.9116 8.73: data/sst2_detailed/logs/l643822359040522400.log
+//data/sst2_detailed/models/m1186560379468823444/model-8.73-0.3060-0.8940.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=1, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-6801170615308151169', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8973 0.9006 0.9083 14.71: data/sst2_detailed/logs/l-6310567276249246979.log
+//data/sst2_detailed/models/m-6801170615308151169/model-14.71-0.3416-0.8973.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m8069334435133434255', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8884 0.899 0.9083 7.88: data/sst2_detailed/logs/l-4231514968048116825.log
+//data/sst2_detailed/models/m8069334435133434255/model-7.88-0.3081-0.8884.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-4819698807333392568', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8973 0.9017 0.9072 25.58: data/sst2_detailed/logs/l-4935900941740322.log
+//data/sst2_detailed/models/m-4819698807333392568/model-25.58-0.3626-0.8973.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m6581778325347395516', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.894 0.9028 0.9121 11.77: data/sst2_detailed/logs/l6224913273193061772.log
+//data/sst2_detailed/models/m6581778325347395516/model-11.77-0.3034-0.8940.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m8608095018923308669', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8906 0.8995 0.9116 7.08: data/sst2_detailed/logs/l7501590831839712039.log
+//data/sst2_detailed/models/m8608095018923308669/model-7.08-0.2962-0.8906.pkl
+//---------------
+//[0.9023, 0.9006, 0.899, 0.9017, 0.9028, 0.8995]
+//90.28 89.9 90.09833333333333 0.14040615687671637
+//========================================================================
+//clf_hidden_dim=300, leaf_rnn=True, bidirectional=False, batchnorm=False, dropout=0.25, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=False,
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-329775151693077264', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8828 0.9023 0.9061 5.34: data/sst2_detailed/logs/l-7357498006970354855.log
+//data/sst2_detailed/models/m-329775151693077264/model-5.34-0.3705-0.8828.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-4361058588079579012', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.894 0.9066 0.9072 7.43: data/sst2_detailed/logs/l4762586133462260801.log
+//data/sst2_detailed/models/m-4361058588079579012/model-7.43-0.4330-0.8940.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-1251637625360658183', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8917 0.8946 0.9099 8.13: data/sst2_detailed/logs/l-6870098684138815136.log
+//data/sst2_detailed/models/m-1251637625360658183/model-8.13-0.4199-0.8917.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=1, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-9206347763558347568', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8951 0.8979 0.9066 4.94: data/sst2_detailed/logs/l-615701994793655739.log
+//data/sst2_detailed/models/m-9206347763558347568/model-4.94-0.3201-0.8951.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-4580333483365264415', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8906 0.8984 0.9033 11.52: data/sst2_detailed/logs/l6627609641889669848.log
+//data/sst2_detailed/models/m-4580333483365264415/model-11.52-0.4477-0.8906.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m7648163484793202511', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8951 0.8962 0.9061 7.23: data/sst2_detailed/logs/l2824887465269884699.log
+//data/sst2_detailed/models/m7648163484793202511/model-7.23-0.3521-0.8951.pkl
+//---------------
+//[0.9023, 0.9066, 0.8946, 0.8979, 0.8984, 0.8962]
+//90.66 89.46 89.93333333333334 0.4015663775212701
+//========================================================================
+//clf_hidden_dim=300, leaf_rnn=False, bidirectional=False, batchnorm=True, dropout=0.5, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=False,
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m8235399108931040156', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.894 0.9006 0.905 16.36: data/sst2_detailed/logs/l5636530716571500331.log
+//data/sst2_detailed/models/m8235399108931040156/model-16.36-0.2999-0.8940.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m1648895708368024359', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8862 0.8907 0.9044 11.27: data/sst2_detailed/logs/l3034005373688246100.log
+//data/sst2_detailed/models/m1648895708368024359/model-11.27-0.3433-0.8862.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-2363106725488184192', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8862 0.9039 0.9138 9.58: data/sst2_detailed/logs/l1121618140814341076.log
+//data/sst2_detailed/models/m-2363106725488184192/model-9.58-0.3119-0.8862.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=1, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-1540485948103075285', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8929 0.9061 0.9121 18.15: data/sst2_detailed/logs/l-8178163745288109181.log
+//data/sst2_detailed/models/m-1540485948103075285/model-18.15-0.3231-0.8929.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m3023992247851418275', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8906 0.9083 0.911 18.70: data/sst2_detailed/logs/l-9052266666595270403.log
+//data/sst2_detailed/models/m3023992247851418275/model-18.70-0.3075-0.8906.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-6485071300995863151', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8862 0.8935 0.9088 12.17: data/sst2_detailed/logs/l7454328974662234870.log
+//data/sst2_detailed/models/m-6485071300995863151/model-12.17-0.3251-0.8862.pkl
+//---------------
+//[0.9006, 0.8907, 0.9039, 0.9061, 0.9083, 0.8935]
+//90.83 89.07000000000001 90.05166666666668 0.6439569516322932
+//========================================================================
+//clf_hidden_dim=300, leaf_rnn=False, bidirectional=False, batchnorm=True, dropout=0.5, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=True,
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m4937106288686551786', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8895 0.9017 0.905 10.77: data/sst2_detailed/logs/l6137167811587462397.log
+//data/sst2_detailed/models/m4937106288686551786/model-10.77-0.3063-0.8895.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=1, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-7796560683507101091', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.885 0.8995 0.9083 16.86: data/sst2_detailed/logs/l1446014913061793036.log
+//data/sst2_detailed/models/m-7796560683507101091/model-16.86-0.2960-0.8850.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m6471150013650487939', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8895 0.9072 0.9116 17.60: data/sst2_detailed/logs/l-2702637878972590742.log
+//data/sst2_detailed/models/m6471150013650487939/model-17.60-0.2887-0.8895.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m3539236741311318221', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.885 0.9023 0.9094 15.71: data/sst2_detailed/logs/l-4118991234620120133.log
+//data/sst2_detailed/models/m3539236741311318221/model-15.71-0.3017-0.8850.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-562757874325922241', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8862 0.9023 0.9094 11.77: data/sst2_detailed/logs/l2763203517745160828.log
+//data/sst2_detailed/models/m-562757874325922241/model-11.77-0.3150-0.8862.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-6478731861151646177', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.885 0.9006 0.9077 13.27: data/sst2_detailed/logs/l1280608688850193737.log
+//data/sst2_detailed/models/m-6478731861151646177/model-13.27-0.3094-0.8850.pkl
+//---------------
+//[0.9017, 0.8995, 0.9072, 0.9023, 0.9023, 0.9006]
+//90.72 89.95 90.22666666666666 0.2418447619628956
+//========================================================================
+//clf_hidden_dim=300, leaf_rnn=False, bidirectional=False, batchnorm=True, dropout=0.25, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=False,
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-4532170157113185961', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8862 0.8962 0.9006 6.23: data/sst2_detailed/logs/l313102085433888617.log
+//data/sst2_detailed/models/m-4532170157113185961/model-6.23-0.3266-0.8862.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m8916594954220309121', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8884 0.894 0.9066 11.27: data/sst2_detailed/logs/l-3481245041389541843.log
+//data/sst2_detailed/models/m8916594954220309121/model-11.27-0.3579-0.8884.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-56785048671758048', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8839 0.8979 0.9012 13.51: data/sst2_detailed/logs/l598857854970350165.log
+//data/sst2_detailed/models/m-56785048671758048/model-13.51-0.3525-0.8839.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-1765458676900754670', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.885 0.8902 0.9044 6.43: data/sst2_detailed/logs/l-7405928549139809124.log
+//data/sst2_detailed/models/m-1765458676900754670/model-6.43-0.3085-0.8850.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=1, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-5148703907323571117', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8828 0.8902 0.9006 12.62: data/sst2_detailed/logs/l-1485053712979153590.log
+//data/sst2_detailed/models/m-5148703907323571117/model-12.62-0.3630-0.8828.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-5313962047876502016', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8839 0.8918 0.9033 13.32: data/sst2_detailed/logs/l8091228874974310403.log
+//data/sst2_detailed/models/m-5313962047876502016/model-13.32-0.3769-0.8839.pkl
+//---------------
+//[0.8962, 0.894, 0.8979, 0.8902, 0.8902, 0.8918]
+//89.79 89.02 89.33833333333332 0.2929400773006134
+//========================================================================
+//clf_hidden_dim=300, leaf_rnn=False, bidirectional=False, batchnorm=True, dropout=0.25, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=True,
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-8329347324748355151', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8772 0.8951 0.9017 8.28: data/sst2_detailed/logs/l5770394421043741917.log
+//data/sst2_detailed/models/m-8329347324748355151/model-8.28-0.3522-0.8772.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-4645063934973581528', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8806 0.8858 0.9044 6.63: data/sst2_detailed/logs/l575538609679944848.log
+//data/sst2_detailed/models/m-4645063934973581528/model-6.63-0.3119-0.8806.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-6499329802246454458', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8862 0.9017 0.9044 17.40: data/sst2_detailed/logs/l-1845005649124085998.log
+//data/sst2_detailed/models/m-6499329802246454458/model-17.40-0.3822-0.8862.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m4816636632094566475', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8828 0.888 0.9023 7.18: data/sst2_detailed/logs/l-4060897127894091295.log
+//data/sst2_detailed/models/m4816636632094566475/model-7.18-0.3411-0.8828.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=1, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m6682826749000139489', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8828 0.905 0.9088 10.47: data/sst2_detailed/logs/l8840678461568221880.log
+//data/sst2_detailed/models/m6682826749000139489/model-10.47-0.3603-0.8828.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m5291424734152943779', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8839 0.8924 0.9001 7.53: data/sst2_detailed/logs/l2405443849508821302.log
+//data/sst2_detailed/models/m5291424734152943779/model-7.53-0.3104-0.8839.pkl
+//---------------
+//[0.8951, 0.8858, 0.9017, 0.888, 0.905, 0.8924]
+//90.5 88.58 89.46666666666667 0.6887589483185591
+//========================================================================
+//clf_hidden_dim=300, leaf_rnn=False, bidirectional=False, batchnorm=False, dropout=0.25, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=False,
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m5757565531081888979', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8873 0.8951 0.905 21.10: data/sst2_detailed/logs/l2048473530396140256.log
+//data/sst2_detailed/models/m5757565531081888979/model-21.10-0.4074-0.8873.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=1, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-7197176537190795981', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8761 0.8874 0.8995 7.03: data/sst2_detailed/logs/l689607251593770793.log
+//data/sst2_detailed/models/m-7197176537190795981/model-7.03-0.3995-0.8761.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m928705079170461475', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8806 0.8869 0.9017 8.43: data/sst2_detailed/logs/l-3461804843608309908.log
+//data/sst2_detailed/models/m928705079170461475/model-8.43-0.3495-0.8806.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m4786513791650098860', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8817 0.8918 0.9033 11.72: data/sst2_detailed/logs/l-3632967735340811178.log
+//data/sst2_detailed/models/m4786513791650098860/model-11.72-0.3399-0.8817.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m7110004820676372002', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8806 0.8896 0.8979 16.91: data/sst2_detailed/logs/l3582964326052975711.log
+//data/sst2_detailed/models/m7110004820676372002/model-16.91-0.4473-0.8806.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m1148730311660830517', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.885 0.8869 0.8929 15.46: data/sst2_detailed/logs/l1219666439950735695.log
+//data/sst2_detailed/models/m1148730311660830517/model-15.46-0.4458-0.8850.pkl
+//---------------
+//[0.8951, 0.8874, 0.8869, 0.8918, 0.8896, 0.8869]
+//89.51 88.69 88.96166666666666 0.30140872950567055
+//========================================================================
+//clf_hidden_dim=300, leaf_rnn=False, bidirectional=False, batchnorm=False, dropout=0.25, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=True,
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m9030295896071880485', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8783 0.8913 0.899 11.32: data/sst2_detailed/logs/l2817274344280953692.log
+//data/sst2_detailed/models/m9030295896071880485/model-11.32-0.4453-0.8783.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-183844134636728500', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8783 0.8902 0.9039 10.47: data/sst2_detailed/logs/l-2299865161013630964.log
+//data/sst2_detailed/models/m-183844134636728500/model-10.47-0.3850-0.8783.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=1, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-7420558641116804302', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8806 0.894 0.9044 8.88: data/sst2_detailed/logs/l-30167513399009266.log
+//data/sst2_detailed/models/m-7420558641116804302/model-8.88-0.3318-0.8806.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m4994644616174981822', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8806 0.883 0.899 12.22: data/sst2_detailed/logs/l2553545523250122978.log
+//data/sst2_detailed/models/m4994644616174981822/model-12.22-0.3959-0.8806.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m7294100395798258714', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8761 0.8891 0.8979 9.53: data/sst2_detailed/logs/l1167168057448946681.log
+//data/sst2_detailed/models/m7294100395798258714/model-9.53-0.4164-0.8761.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.25, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m6340804547889604223', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8828 0.8863 0.9006 12.42: data/sst2_detailed/logs/l-1000068102990150350.log
+//data/sst2_detailed/models/m6340804547889604223/model-12.42-0.4474-0.8828.pkl
+//---------------
+//[0.8913, 0.8902, 0.894, 0.883, 0.8891, 0.8863]
+//89.4 88.3 88.89833333333334 0.3536201665943593
+//========================================================================
+//clf_hidden_dim=300, leaf_rnn=False, bidirectional=False, batchnorm=False, dropout=0.5, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=False,
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-8486222927291335091', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8728 0.8819 0.894 7.68: data/sst2_detailed/logs/l3013226713690150404.log
+//data/sst2_detailed/models/m-8486222927291335091/model-7.68-0.3534-0.8728.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m8400127081442685695', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8817 0.8935 0.8935 11.02: data/sst2_detailed/logs/l1684907034545297923.log
+//data/sst2_detailed/models/m8400127081442685695/model-11.02-0.3359-0.8817.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-4357241583860327771', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8806 0.8913 0.899 19.05: data/sst2_detailed/logs/l-4712123175423166124.log
+//data/sst2_detailed/models/m-4357241583860327771/model-19.05-0.3246-0.8806.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-1630397709180523917', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8739 0.8852 0.8929 13.32: data/sst2_detailed/logs/l874330692092856193.log
+//data/sst2_detailed/models/m-1630397709180523917/model-13.32-0.3410-0.8739.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-8869867255297787761', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8672 0.883 0.899 7.78: data/sst2_detailed/logs/l607431886144082276.log
+//data/sst2_detailed/models/m-8869867255297787761/model-7.78-0.3454-0.8672.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=1, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m7022238325322442543', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8806 0.8836 0.8929 11.72: data/sst2_detailed/logs/l-596252618622368975.log
+//data/sst2_detailed/models/m7022238325322442543/model-11.72-0.3384-0.8806.pkl
+//---------------
+//[0.8819, 0.8935, 0.8913, 0.8852, 0.883, 0.8836]
+//89.35 88.19 88.64166666666668 0.4387640469419605
+//========================================================================
+//clf_hidden_dim=300, leaf_rnn=False, bidirectional=False, batchnorm=False, dropout=0.5, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=True,
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m8729383509098496544', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8717 0.8814 0.894 11.42: data/sst2_detailed/logs/l263510068582277688.log
+//data/sst2_detailed/models/m8729383509098496544/model-11.42-0.3154-0.8717.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m6525873445398085327', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8683 0.888 0.8902 11.72: data/sst2_detailed/logs/l-1569244372983946671.log
+//data/sst2_detailed/models/m6525873445398085327/model-11.72-0.3375-0.8683.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-6271837760276297911', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8728 0.8819 0.8962 8.23: data/sst2_detailed/logs/l-8607994700188317549.log
+//data/sst2_detailed/models/m-6271837760276297911/model-8.23-0.3313-0.8728.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m5646038250388250997', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8839 0.8852 0.9006 9.97: data/sst2_detailed/logs/l8269317876462222353.log
+//data/sst2_detailed/models/m5646038250388250997/model-9.97-0.3249-0.8839.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=1, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-222264066134785081', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8828 0.8874 0.9001 10.27: data/sst2_detailed/logs/l4745408688312375641.log
+//data/sst2_detailed/models/m-222264066134785081/model-10.27-0.3175-0.8828.pkl
+//---------------
+//Namespace(batch_size=32, batchnorm=False, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=False, lower=True, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m3668021243470215042', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+//0.8694 0.8891 0.8962 10.12: data/sst2_detailed/logs/l3726922573757827498.log
+//data/sst2_detailed/models/m3668021243470215042/model-10.12-0.3165-0.8694.pkl
+//---------------
+//[0.8814, 0.888, 0.8819, 0.8852, 0.8874, 0.8891]
+//88.91 88.14 88.55 0.2963106478005815
+//========================================================================
+//
+//Process finished with exit code 0

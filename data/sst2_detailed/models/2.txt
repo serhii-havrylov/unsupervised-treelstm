@@ -1,0 +1,27 @@
+clf_hidden_dim=300, leaf_rnn=True, bidirectional=False, batchnorm=True, dropout=0.5, l2reg=0.0, fix_word_embedding=False, optimizer='adadelta', lower=False,
+Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=3, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-173211807682944491', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+0.8929 0.9028 0.9121 7.08: data/sst2_detailed/logs/l8283367072913560538.log
+data/sst2_detailed/models/m-173211807682944491/model-7.08-0.3133-0.8929.pkl
+---------------
+Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=2, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m6867782120460335322', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+0.9018 0.9023 0.9116 15.76: data/sst2_detailed/logs/l4639875813958491145.log
+data/sst2_detailed/models/m6867782120460335322/model-15.76-0.3696-0.9018.pkl
+---------------
+Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=1, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m6444857467312033889', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+0.8996 0.894 0.9116 17.85: data/sst2_detailed/logs/l809299379121554065.log
+data/sst2_detailed/models/m6444857467312033889/model-17.85-0.4000-0.8996.pkl
+---------------
+Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=5, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-7967802868492373935', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+0.9051 0.9105 0.9138 12.07: data/sst2_detailed/logs/l4066182727762277521.log
+data/sst2_detailed/models/m-7967802868492373935/model-12.07-0.3259-0.9051.pkl
+---------------
+Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=0, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m-3408101962722230136', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+0.894 0.9012 0.9072 5.49: data/sst2_detailed/logs/l5261399754673745223.log
+data/sst2_detailed/models/m-3408101962722230136/model-5.49-0.2960-0.8940.pkl
+---------------
+Namespace(batch_size=32, batchnorm=True, bidirectional=False, clf_hidden_dim=300, clf_num_layers=1, device=0, dropout=0.5, fine_grained=False, fix_word_embedding=False, halve_lr_every=2, hidden_dim=300, id=4, intra_attention=False, l2reg=0.0, leaf_rnn=True, lower=False, max_epoch=500, omit_prob=0.0, optimizer='adadelta', pretrained='glove.840B.300d', save_dir='data/sst2_detailed/models/m5012602752198580379', tensor_board_path='data/sst2_detailed/tensorboard', word_dim=300)
+0.8906 0.9017 0.9061 8.98: data/sst2_detailed/logs/l8976160198616619875.log
+data/sst2_detailed/models/m5012602752198580379/model-8.98-0.3013-0.8906.pkl
+---------------
+[0.9028, 0.9023, 0.894, 0.9105, 0.9012, 0.9017]
+91.05 89.4 90.20833333333333 0.4790064949687231

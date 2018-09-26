@@ -77,7 +77,7 @@ def main():
     parser.add_argument('--dropout', default=0.0, type=float)
     parser.add_argument('--device', default='cuda')
     parser.add_argument('--batch-size', default=10, type=int)
-    parser.add_argument('--bidirectional', default=True, action='store_true')
+    parser.add_argument('--bidirectional', default=False, action='store_true')
     parser.add_argument('--fine-grained', default=False, action='store_true')
     parser.add_argument('--lower', default=True, action='store_true')
     args = parser.parse_args()
