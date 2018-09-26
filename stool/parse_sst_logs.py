@@ -6,8 +6,8 @@ from collections import defaultdict
 results = defaultdict(list)
 
 
-# for log_file_path in glob.glob("data/sst5_exp/logs/*.log"):
-for log_file_path in glob.glob("data/sst2_detailed/logs/*.log"):
+for log_file_path in glob.glob("data/sst5_exp/logs/*.log"):
+# for log_file_path in glob.glob("data/sst2_detailed/logs/*.log"):
 # for log_file_path in glob.glob("data/sst_exp/logs/*.log"):
     with open(log_file_path) as file:
         hyper_params = None
@@ -21,7 +21,8 @@ for log_file_path in glob.glob("data/sst2_detailed/logs/*.log"):
         for i, line in enumerate(file):
             if i == 0:
                 line = line.split()
-                key = ' '.join([line[7], line[18], line[6], line[5], line[10], line[17], line[12], line[22], line[19]])
+                key = ' '.join([line[7], line[18], line[5], line[12], line[4], line[19]])
+                # key = ' '.join([line[7], line[18], line[6], line[5], line[10], line[17], line[12], line[22], line[19]])
                 hyper_params = ' '.join(line[4:])
                 continue
             if "Saved the new best model" in line:
