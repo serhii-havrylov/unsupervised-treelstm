@@ -181,6 +181,7 @@ def train(args):
                 else:
                     last_time += 1
                     if last_time > patience:
+                        logger.info("done")
                         return
 
                 with torch.no_grad():
@@ -203,7 +204,6 @@ def train(args):
                                        value=num_correct / num_data,
                                        step=iter_count)
                     logger.info(f'Accuracy: {num_correct / num_data:.4f} # data: {num_data} # correct: {num_correct}')
-    logger.info("done")
 
 
 def main():

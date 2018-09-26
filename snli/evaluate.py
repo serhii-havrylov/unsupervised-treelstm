@@ -1,5 +1,4 @@
 import argparse
-import pickle
 
 import numpy as np
 import torch
@@ -7,11 +6,16 @@ from torch.utils.data import DataLoader
 
 from snli.models import SNLIModel
 from snli.utilss.dataset import SNLIDataset
+from utils.vocab import Vocab
 
 
 def evaluate(args):
-    with open(args.data, 'rb') as f:
-        test_dataset: SNLIDataset = pickle.load(f)
+    word_vocab = Vocab.from_file(path=args.vocab, add_pad=True, add_unk=True)
+    label_dict = {'neutral': 0, 'entailment': 1, 'contradiction': 2}
+    label_vocab = Vocab(vocab_dict=label_dict, add_pad=False, add_unk=False)
+    test_dataset = SNLIDataset(data_path=args.data, word_vocab=word_vocab, label_vocab=label_vocab,
+                               max_length=500, lower=True)
+
     word_vocab = test_dataset.word_vocab
     label_vocab = test_dataset.label_vocab
     model = SNLIModel(num_classes=len(label_vocab), num_words=len(word_vocab),
@@ -57,6 +61,7 @@ def evaluate(args):
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument('--vocab', required=True)
     parser.add_argument('--model', required=True)
     parser.add_argument('--data', required=True)
     parser.add_argument('--word-dim', required=True, type=int)
@@ -66,9 +71,9 @@ def main():
     parser.add_argument('--leaf-rnn', default=False, action='store_true')
     parser.add_argument('--bidirectional', default=False, action='store_true')
     parser.add_argument('--intra-attention', default=False, action='store_true')
-    parser.add_argument('--batchnorm', default=False, action='store_true')
+    parser.add_argument('--batchnorm', default=True, action='store_true')
     parser.add_argument('--dropout', default=0.0, type=float)
-    parser.add_argument('--device', default='cpu')
+    parser.add_argument('--device', default='cuda')
     parser.add_argument('--batch-size', default=128, type=int)
     args = parser.parse_args()
     evaluate(args)

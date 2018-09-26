@@ -1,0 +1,8 @@
+data/snli_detailed_grid_exp/models/m-3374590629893499395/model-9.00-0.4241-0.8622.pkl
+data/snli_detailed_grid_exp/models/m7058803186518933741/model-7.40-0.4071-0.8599.pkl
+data/snli_detailed_grid_exp/models/m2384114890936022630/model-6.10-0.4014-0.8584.pkl
+data/snli_detailed_grid_exp/models/m-557568615048947042/model-5.00-0.3850-0.8613.pkl
+data/snli_detailed_grid_exp/models/m8579614126256803077/model-6.80-0.3934-0.8582.pkl
+data/snli_detailed_grid_exp/models/m4517704545311391957/model-6.00-0.3830-0.8596.pkl
+[0.8546, 0.8479, 0.8512, 0.8535, 0.8543, 0.8548]
+85.48 84.78999999999999 85.27166666666666 0.2466722972330348

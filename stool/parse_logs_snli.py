@@ -16,6 +16,7 @@ for log_file_path in glob.glob("data/snli_detailed_grid_exp/logs/*.log"):
         best_test_accuracy = None
         test_accuracy_cheat = -1.0
         model_dir = None
+        done = False
 
         for i, line in enumerate(file):
             if i == 0:
@@ -44,6 +45,8 @@ for log_file_path in glob.glob("data/snli_detailed_grid_exp/logs/*.log"):
                     best_valid_accuracy = valid_accuracy
                     best_test_accuracy = test_accuracy
                 save_flag = False
+            if "done" in line:
+                done = True
 
     results[key].append({"hyper_params": hyper_params,
                          "best_epoch": best_epoch,
@@ -51,7 +54,8 @@ for log_file_path in glob.glob("data/snli_detailed_grid_exp/logs/*.log"):
                          "best_test_accuracy": best_test_accuracy,
                          "test_accuracy_cheat": test_accuracy_cheat,
                          "file": log_file_path,
-                         "model_path": model_path})
+                         "model_path": model_path,
+                         "done": done})
 
 
 sorted_results = sorted(results.items(), key=lambda kv: -np.mean([e["best_valid_accuracy"] for e in kv[1]]) )
@@ -62,7 +66,8 @@ for k, v in sorted_results:
     print(k)
     seq = []
     for e in v:
-        print(e["best_valid_accuracy"], e["best_test_accuracy"], e["test_accuracy_cheat"], e["best_epoch"], e["file"])
+        print(e["hyper_params"])
+        print(e["best_valid_accuracy"], e["best_test_accuracy"], e["test_accuracy_cheat"], e["best_epoch"], e["file"], e["done"])
         print(e["model_path"])
         seq.append(e["best_test_accuracy"])
         # seq.append(e["test_accuracy_cheat"])
