@@ -6,6 +6,8 @@ from collections import defaultdict
 results = defaultdict(list)
 
 
+
+# for log_file_path in glob.glob("data/sst5_exp_detailed/logs/*.log"):
 for log_file_path in glob.glob("data/sst5_exp/logs/*.log"):
 # for log_file_path in glob.glob("data/sst2_detailed/logs/*.log"):
 # for log_file_path in glob.glob("data/sst_exp/logs/*.log"):
